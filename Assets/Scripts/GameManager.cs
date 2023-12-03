@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    private int seleccion = 1;
+    private static int seleccion;
 
     private void Awake()
     {
@@ -24,11 +24,13 @@ public class GameManager : MonoBehaviour
 
     public int DameNumeroPet()
     {
+        print(seleccion);
         return seleccion;
     }
 
     public void SetSeleccion(int _seleccion)
     {
         seleccion = _seleccion;
+        print(seleccion);
     }
 }
